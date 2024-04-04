@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Grid{
+            display: grid;
+            /* THis is the hard quoted space  */
+            /* grid-template-columns: repeat(4,50px); */
+            /* grid-template-rows: 50px 75px 50px; */
+            /* This is for the responsive coloumn  alloting the fractional unit  */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* \This adjust the extra rows */
+            grid-auto-rows: 50px;
+            column-gap: 4px;
+            row-gap: 4px;
+        }
+        .Child{
+            background-color:blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Grid">
+        <div class="Child">1</div>
+        <div class="Child">2</div>
+        <div class="Child">3</div>
+        <div class="Child">4</div>
+        <div class="Child">5</div>
+        <div class="Child">6</div>
+        <div class="Child">7</div>
+        <div class="Child">8</div>
+        <div class="Child">9</div>
+
+    </div>
+    
+</body>
+</html>
