@@ -1,0 +1,38 @@
+The `for...of` and `for...in` loops in JavaScript are both used for iteration, but they have different purposes and behaviors:
+
+1. **`for...of` loop**:
+   - Introduced in ECMAScript 6 (ES6), the `for...of` loop is used to iterate over iterable objects such as arrays, strings, maps, sets, etc.
+   - It iterates over the values of an iterable object, rather than its properties or indices.
+   - It provides a simpler syntax compared to traditional `for` loops.
+   - Example:
+
+    ```javascript
+    const array = [1, 2, 3];
+    for (const value of array) {
+        console.log(value);
+    }
+    // Output:
+    // 1
+    // 2
+    // 3
+    ```
+
+2. **`for...in` loop**:
+   - The `for...in` loop is used to iterate over the enumerable properties of an object. It iterates over the keys or property names of an object, including properties inherited from its prototype chain.
+   - It's generally used with objects, but it can also be used with arrays. However, using it with arrays can lead to unexpected behavior because it iterates over array indices as strings, including inherited enumerable properties.
+   - Example:
+
+    ```javascript
+    const object = {a: 1, b: 2, c: 3};
+    for (const key in object) {
+        console.log(key + ': ' + object[key]);
+    }
+    // Output:
+    // a: 1
+    // b: 2
+    // c: 3
+    ```
+
+In summary:
+The for of loop is used to itrate over the objects such as array and the for in 
+loop is used to itrate over the key of the object.
