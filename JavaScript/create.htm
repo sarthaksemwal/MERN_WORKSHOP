@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="new">
+        <h1 class="New">Hey</h1>
+    </div>
+    <div class="new2">
+        <h2>Hey 2</h2>
+    </div>
+    
+</body>
+</html>
+<script>
+//creating the element using the javascript
+
+   const ne=document.createElement("h3")
+   ne.innerText="OYEEEEEEE" 
+   const firstdiv=document.getElementsByTagName("div")
+   firstdiv[0].appendChild(ne)
+   
+
+   //remove child
+   const rem = document.querySelector(".New");
+   rem.remove();
+
+</script>
