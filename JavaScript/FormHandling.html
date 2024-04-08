@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style> -->
+</head>
+<body>
+    <div class="parent">
+        <form onsubmit="submitForm(event)">
+           <label for="">NAME:</label> <input type="text" name="firstName" placeholder="Firstname" onkeydown="firstnamechange(event)"><br><br>
+           <label for="">LastName:</label> <input type="text" name="lastName" placeholder="Lastname"><br><br>
+           <label for="">Number:</label> <input type="number" name="age" placeholder="age"><br><br>
+           <label for="">Hobbies: </label>
+           <label for="">Webd</label> <input type="checkbox" name="hobbies" value="webd">
+           <label for="">Shooting</label>  <input type="checkbox" name="hobbies" value="shooting">
+           <label for="">singing</label> <input type="checkbox" name="hobbies" value="singing"><br><br>
+           <input type="submit" name="" id="">
+           <button onclick="Change()">Change</button>
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+ // This function handles the form submission event. It prevents the default form submission behavior,
+// collects the form data, and stores it in an object called 'res'. The collected data includes the values
+// of input fields and checkboxes within the form. Finally, it logs the 'res' object to the console.
+
+    
+
+ function submitForm(e){
+    e.preventDefault();
+   const t=e.target;
+   const res={
+    hobbies:[],
+   };
+   for(let i=0; i<t.length;i++){
+    const ty=t[i].type;
+    if(ty!=='submit'){
+        const vl=t[i].value
+        const nm=t[i].name
+        if(ty=='checkbox' && t[i].checked){
+            res.hobbies.push(vl);
+        }
+        if(ty!=='checkbox'){
+            res[nm]=vl;
+        }
+
+    }
+   }
+
+ console.log(res)
+ }
+
+
+</script>
+
+
