@@ -2,7 +2,7 @@ ARRAY FUNCTIONS IN JavaScript
 
 array.isarray-
 In JavaScript, Array.isArray() is a built-in method used to determine whether a given value is an array or not. It returns true if the value is an array and false otherwise.
-
+x
 1. **`push()`**: Adds one or more elements to the end of an array and returns the new length of the array.
    
    ```javascript
