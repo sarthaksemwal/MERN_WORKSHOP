@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <style>
+    * {
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        img{
+            width: 300px;
+            height: 150px;
+        }
+
+
+        .product-card {
+            background-color: #f0f0f0; /* Light gray background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s; /* Add transition for scaling and box-shadow */
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
+        .product-card h4 {
+            margin-top: 0; /* Remove default margin */
+        }
+
+        .product-card p {
+            color: #666; /* Dark gray text color */
+        }
+        </style>
+    </head>
+    <body>
+        __PRODUCTS__CARDS__
+    </body>
+</html>
